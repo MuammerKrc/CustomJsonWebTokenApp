@@ -10,13 +10,13 @@ using SharedLayer.Dtos;
 
 namespace CoreLayer.IServices
 {
-    public interface IServices<TModel,TDto,TKey> where TModel:BaseModel<TKey> where TDto:class
+    public interface IBaseService<TModel,TDto,TKey> where TModel:BaseModel<TKey> where TDto:class
     {
         Task<Response<TDto>> GetByIdAsync(TKey id);
         Task<Response<IEnumerable<TDto>>> GetAllAsync();
-        Task<Response<IEnumerable<TDto>>> Where(Expression<Func<TModel, bool>> predicate);
+        Task<Response<List<TDto>>> Where(Expression<Func<TModel, bool>> predicate);
         Task<Response<TDto>> AddAsync(TModel model);
         Task<Response<TDto>> UpdateAsync(TModel model);
-        Response<NoResponse> Remove(TKey id);
+        Task<Response<TDto>> RemoveAsync(TKey id);
     }
 }

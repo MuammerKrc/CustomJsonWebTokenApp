@@ -27,7 +27,7 @@ namespace SharedLayer.Dtos
             return new Response<TModel>(){Error = errors,StatusCode = statusCode,IsSuccess = false};
         }
 
-        public static Response<TModel> ErrorResponse(string error,bool isShow, int statusCode = 500)
+        public static Response<TModel> ErrorResponse(string error,bool isShow=true, int statusCode = 500)
         {
             return new Response<TModel>() {Error = new ErrorDto(isShow:false,error:error),StatusCode = statusCode,IsSuccess = false};
         }
