@@ -12,6 +12,6 @@ namespace CoreLayer.IServices
     public interface ITokenService
     {
         TokenDto CreateTokenForUser(AppUser appUser);
-        ClientTokenDto CreateClientToken(ClientTokenDto client);
+        ClientTokenDto CreateClientToken(Client client);
     }
 }
