@@ -13,7 +13,7 @@ namespace DataLayer.Configurations
     {
         public void Configure(EntityTypeBuilder<UserRefreshToken> builder)
         {
-            builder.HasKey(x => x.UserId);
+            builder.HasKey(x => x.Id);
             builder.Property(x => x.RefreshToken).IsRequired();
         }
     }

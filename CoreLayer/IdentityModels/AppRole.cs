@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace CoreLayer.IdentityModels
 {
-    public class AppRole:IdentityRole
+    public class AppRole:IdentityRole<long>
     {
 
     }

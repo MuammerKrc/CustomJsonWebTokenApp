@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataLayer.UnitOfWorks
 {
-    public class UnitOfWork:IUnitOfWork
+    public class UnitOfWorks:IUnitOfWork
     {
         private readonly DbContext _context;
 
-        public UnitOfWork(DbContext context)
+        public UnitOfWorks(AppDbContext context)
         {
             _context = context;
         }

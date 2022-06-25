@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataLayer
 {
-    public class AppDbContext:IdentityDbContext<AppUser,AppRole,string>
+    public class AppDbContext:IdentityDbContext<AppUser,AppRole,long>
     {
         public AppDbContext(DbContextOptions options):base(options)
         {

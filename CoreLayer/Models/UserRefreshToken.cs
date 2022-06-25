@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace CoreLayer.Models
 {
-    public class UserRefreshToken
+    public class UserRefreshToken:BaseModel<long>
     {
-        public string UserId { get; set; }
         public string RefreshToken { get; set; }
         public DateTime Expiration { get; set; }
     }

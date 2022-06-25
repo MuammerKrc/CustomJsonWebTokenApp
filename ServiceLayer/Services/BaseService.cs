@@ -23,11 +23,10 @@ namespace ServiceLayer.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IBaseRepositories<TModel,TKey> _repositories;
 
-        public BaseService(IUnitOfWork unitOfWork, IBaseRepositories<TModel, TKey> repositories, ILogger<BaseService<TModel, TDto, TKey>> logger)
+        public BaseService(IUnitOfWork unitOfWork, IBaseRepositories<TModel, TKey> repositories)
         {
             _unitOfWork = unitOfWork;
             _repositories = repositories;
-            _logger = logger;
         }
 
         protected Response<TDto> GetClientError()

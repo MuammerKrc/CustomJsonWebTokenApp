@@ -17,6 +17,7 @@ namespace ServiceLayer.MapperSettings
             CreateMap<ProductDto, Product>().ReverseMap();
 
             CreateMap<UserDto, AppUser>().ReverseMap();
+            CreateMap<CreateUserDto, AppUser>().ReverseMap();
         }
     }
 }

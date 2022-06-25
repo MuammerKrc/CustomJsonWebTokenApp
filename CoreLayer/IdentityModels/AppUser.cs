@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace CoreLayer.IdentityModels
 {
-    public class AppUser:IdentityUser
+    public class AppUser:IdentityUser<long>
     {
         public string City { get; set; } 
     }

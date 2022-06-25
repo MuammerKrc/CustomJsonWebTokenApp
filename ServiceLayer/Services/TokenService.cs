@@ -38,7 +38,7 @@ namespace ServiceLayer.Services
             var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpiration);
             var refreshTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.RefreshTokenExpiration);
             var symmetricSecurityKey = GetSymmetricSecurityKey(_tokenOption.SecurityKey);
-            SigningCredentials signingCredentials = new SigningCredentials(symmetricSecurityKey,SecurityAlgorithms.HmacSha256Signature);
+            SigningCredentials signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256Signature);
             JwtSecurityToken jwtSecurityToken = new JwtSecurityToken(issuer: _tokenOption.Issuer,
                 expires: accessTokenExpiration, notBefore: DateTime.Now,
                 claims: CreateClaimForUser(user: appUser, _tokenOption.Audience),
@@ -53,7 +53,6 @@ namespace ServiceLayer.Services
                 RefreshTokenExpiration = refreshTokenExpiration
             };
             return tokenDto;
-
         }
 
         public ClientTokenDto CreateClientToken(Client client)
@@ -86,7 +85,7 @@ namespace ServiceLayer.Services
         {
             var userList = new List<Claim>()
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Name, user.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
@@ -99,7 +98,6 @@ namespace ServiceLayer.Services
         {
             var claims = new List<Claim>();
             claims.AddRange(client.Audience.Select(x => new Claim(JwtRegisteredClaimNames.Aud, x)));
-
             claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
             claims.Add(new Claim(JwtRegisteredClaimNames.Sub, client.ClientId.ToString()));
             return claims;
