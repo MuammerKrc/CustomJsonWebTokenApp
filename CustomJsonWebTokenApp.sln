@@ -3,17 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTApiSolution", "JWTApiSolution\JWTApiSolution.csproj", "{1470F2EF-90FD-4718-82B9-ACC0B214E669}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTApiSolution", "JWTApiSolution\JWTApiSolution.csproj", "{1470F2EF-90FD-4718-82B9-ACC0B214E669}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLayer", "CoreLayer\CoreLayer.csproj", "{C2DC53A6-E506-495A-9484-5090E2F29FF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreLayer", "CoreLayer\CoreLayer.csproj", "{C2DC53A6-E506-495A-9484-5090E2F29FF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{99DEB44C-5BE4-45BC-A3AE-76099E2BBE9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{99DEB44C-5BE4-45BC-A3AE-76099E2BBE9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{C9AADF36-493C-42DE-AA0B-4D484738DF90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{C9AADF36-493C-42DE-AA0B-4D484738DF90}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedLibrary", "SharedLibrary", "{3381E2B5-B79B-4FD2-AB2B-E3EBC7318EF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLayer", "SharedLibrary\SharedLayer\SharedLayer.csproj", "{8E62935D-B28E-4BB7-B974-03FA8706171B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedLayer", "SharedLibrary\SharedLayer\SharedLayer.csproj", "{8E62935D-B28E-4BB7-B974-03FA8706171B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{D6A19303-9AD5-4076-AA6D-18A2FFCB2262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client1", "Client\Client1\Client1.csproj", "{4FD282BF-0625-4FFA-8C77-481B11214449}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client2", "Clients\Client2\Client2.csproj", "{F099F373-996D-4608-8BEA-2F3B2F606539}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,12 +47,22 @@ Global
 		{8E62935D-B28E-4BB7-B974-03FA8706171B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E62935D-B28E-4BB7-B974-03FA8706171B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E62935D-B28E-4BB7-B974-03FA8706171B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FD282BF-0625-4FFA-8C77-481B11214449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD282BF-0625-4FFA-8C77-481B11214449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD282BF-0625-4FFA-8C77-481B11214449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD282BF-0625-4FFA-8C77-481B11214449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F099F373-996D-4608-8BEA-2F3B2F606539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F099F373-996D-4608-8BEA-2F3B2F606539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F099F373-996D-4608-8BEA-2F3B2F606539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F099F373-996D-4608-8BEA-2F3B2F606539}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8E62935D-B28E-4BB7-B974-03FA8706171B} = {3381E2B5-B79B-4FD2-AB2B-E3EBC7318EF6}
+		{4FD282BF-0625-4FFA-8C77-481B11214449} = {D6A19303-9AD5-4076-AA6D-18A2FFCB2262}
+		{F099F373-996D-4608-8BEA-2F3B2F606539} = {D6A19303-9AD5-4076-AA6D-18A2FFCB2262}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09EAF57F-4452-49EA-B7DB-223636BFA430}
